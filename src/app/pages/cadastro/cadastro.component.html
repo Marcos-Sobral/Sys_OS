@@ -1,0 +1,48 @@
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Cadastro de Usuário</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Nome:" formControlName="firstName">
+            <mat-error *ngIf="addressForm.controls['firstName'].hasError('required')">
+              Preenchimento do Nome é <strong>Obrigatório</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Email" formControlName="email">
+            <mat-error *ngIf="addressForm.controls['email'].hasError('required')">
+              Preenchimento do Email é <strong>Obrigatório</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Telefone:" formControlName="phone">
+            <mat-error *ngIf="addressForm.controls['phone'].hasError('required')">
+              Preenchimento do Telefone é<strong>Obrigatório</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Senha:" formControlName="password">
+            <mat-error *ngIf="addressForm.controls['password'].hasError('required')">
+              Preenchimento da Senha é <strong>Obrigatório</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

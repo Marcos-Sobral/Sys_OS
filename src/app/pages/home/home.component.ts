@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  nome:string = "Sys os";
   ngOnInit(): void {
   }
 

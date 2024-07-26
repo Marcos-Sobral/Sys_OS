@@ -36,6 +36,11 @@ Caso deseje verificar a sua, utilize o comando `ng version` em seu terminal do p
     * Atualize o Angular Material para a versão 16.x:
     `ng update @angular/material@16`
 
+### Problema em adiciona um Json
+Caso esteja tentando importar um arquivo Json para seu projeto, verifique novamente se as declarações feitas no código como também as importações estão mandando para o local exato. Após isso entre no arquivo chama `tsconfig.json` e nele haverá uma sessão denominada de `compilerOptions`, averigue se nela tem alguma importação com o nome `resolveJsonModule` e `esModuleInterop`, se houver apenas modifique seu valor para `true`. Se não houver, adicione eles na sessão:
+  `"resolveJsonModule": true,`
+  `"esModuleInterop": true,`
+
 ## Servidor de desenvolvimento
 
 Execute ng serve para iniciar um servidor de desenvolvimento. Navegue até `http://localhost:4200/`. A aplicação será recarregada automaticamente se você alterar qualquer um dos arquivos de origem.
