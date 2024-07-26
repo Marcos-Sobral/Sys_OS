@@ -23,4 +23,19 @@ BASE_URL: string = 'http://localhost:3000';
     return this.http.post<User>(this.BASE_URL + 'users', user, httOptions);
   }
 
+  editUser(user:any): Observable<User>{
+    let url:string = this.BASE_URL + 'users/' + user.id;
+    return this.http.post<User>(url, user, httOptions);
+  }
+
+  updateUser(user:any): Observable<User>{
+    let url:string = this.BASE_URL + 'users/' + user.id;
+    return this.http.put<User>(url, user, httOptions);
+  }
+
+  deleteUser(user:any): Observable<User>{
+    let url:string = this.BASE_URL + 'users/' + user.id;
+    return this.http.post<User>(url, httOptions);
+  }
+
 }
