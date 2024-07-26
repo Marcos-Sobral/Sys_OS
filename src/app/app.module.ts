@@ -23,6 +23,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { HeaderComponent } from './component/header/header.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ManipulandoJsonComponent } from './pages/manipulando-json/manipulando-json.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ManipulandoJsonComponent } from './pages/manipulando-json/manipulando-j
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
+    HttpClientModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
