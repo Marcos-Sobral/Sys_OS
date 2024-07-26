@@ -1,27 +1,61 @@
 # SysOS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+O Sts OS é um projeto que estou para fins de aprendizagem sobre angula e testes.
 
-## Development server
+## Especificações utilizada no projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<ul>
+  <li>Angular: 14.3.0</li>
+  <li>Angular CLI: 14.2.13</li>
+  <li>Angular devKit/core: 14.2.13</li>
+  <li>Material: 14</li>
+  <li>Node: 20.16.0</li>
+</ul>
 
-## Code scaffolding
+Caso deseje verificar a sua, utilize o comando `ng version` em seu terminal do projeto.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Problemas
+
+### Problema em instalar o Angula Material
+
+* Para instalar o Material:
+` ng update @angular/material@14 `
+
+* Caso já tenha instalado e está com problemas em gerar componentes, tente atualizar
+` ng update @angular/material@14 `
+
+* caso o problema persista tente atualizar os seguintes itens:
+    ---
+    * Atualize o Angular Core e o Angular CLI para a versão 15.x:
+    `ng update @angular/core@15 @angular/cli@15`
+    * Atualize o Angular Material para a versão 15.x:
+    `ng update @angular/material@15`
+    ---
+    * Atualize o Angular Core e o Angular CLI para a versão 16.x:
+    `ng update @angular/core@16 @angular/cli@16` 
+    * Atualize o Angular Material para a versão 16.x:
+    `ng update @angular/material@16`
+
+## Servidor de desenvolvimento
+
+Execute ng serve para iniciar um servidor de desenvolvimento. Navegue até `http://localhost:4200/`. A aplicação será recarregada automaticamente se você alterar qualquer um dos arquivos de origem.
+
+## Estrutura de código
+
+Execute `ng generate component component-name` para gerar um novo componente. Você também pode usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Execute `ng build` para construir o projeto. Os artefatos de build serão armazenados no diretório `dist/`.
 
-## Running unit tests
+## Executando testes unitários
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Execute `ng test` para executar os testes unitários via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Executando teste end-to-end
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Execute `ng e2e` para executar os testes end-to-end via uma plataforma de sua escolha. Para usar este comando, você precisa primeiro adicionar um pacote que implemente capacidades de testes end-to-end.
 
-## Further help
+## Mais informações
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
