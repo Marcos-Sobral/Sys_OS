@@ -1,0 +1,19 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "firstName": "Carlo",
+        "email": "carlo@example.com",
+        "phone": "123-456-7890",
+        "password": "password123"
+      },
+      {
+        "id": 2,
+        "firstName": "Jane",
+        "email": "jane@example.com",
+        "phone": "987-654-3210",
+        "password": "securepass456"
+      }
+    ]
+  }
+  
