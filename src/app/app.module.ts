@@ -24,6 +24,7 @@ import { HeaderComponent } from './component/header/header.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ManipulandoJsonComponent } from './pages/manipulando-json/manipulando-json.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserComponent } from './component/user/user.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HeaderComponent,
     LoginComponent,
-    ManipulandoJsonComponent
+    ManipulandoJsonComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
