@@ -25,6 +25,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { ManipulandoJsonComponent } from './pages/manipulando-json/manipulando-json.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './component/user/user.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { UserComponent } from './component/user/user.component';
     UserComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

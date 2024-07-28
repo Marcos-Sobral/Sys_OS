@@ -1,19 +1,25 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "firstName": "Carlo",
-        "email": "carlo@example.com",
-        "phone": "123-456-7890",
-        "password": "password123"
-      },
-      {
-        "id": 2,
-        "firstName": "Jane",
-        "email": "jane@example.com",
-        "phone": "987-654-3210",
-        "password": "securepass456"
-      }
-    ]
-  }
-  
+  "users": [
+    {
+      "id": 0,
+      "firstName": "Marcos Sobral",
+      "email": "vini15oficial@gmail.com",
+      "phone": "(99) 99218-8809",
+      "password": "marcos16"
+    },
+    {
+      "id": 0,
+      "firstName": "Marcos Sobral",
+      "email": "sobraldeveloper@gmail.com",
+      "phone": "(99) 99218-8809",
+      "password": "marcos16"
+    },
+    {
+      "id": 0,
+      "firstName": "teste",
+      "email": "teste@gmail.com",
+      "phone": "(45) 98814245",
+      "password": "123456"
+    }
+  ]
+}
