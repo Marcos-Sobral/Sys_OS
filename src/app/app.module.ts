@@ -29,6 +29,8 @@ import { FormsModule } from '@angular/forms';
 import { SubeRouteComponent } from './pages/sube-route/sube-route.component';
 import { Page1Component } from './pages/sube-route/page1/page1.component';
 import { Page2Component } from './pages/sube-route/page2/page2.component';
+import { PrivadoComponent } from './pages/privado/privado.component';
+import { DetalheComponent } from './pages/detalhe/detalhe.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { Page2Component } from './pages/sube-route/page2/page2.component';
     UserComponent,
     SubeRouteComponent,
     Page1Component,
-    Page2Component
+    Page2Component,
+    PrivadoComponent,
+    DetalheComponent
   ],
   imports: [
     FormsModule,

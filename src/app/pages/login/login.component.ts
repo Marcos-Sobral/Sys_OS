@@ -1,5 +1,7 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { AutorizacaoService } from 'src/app/services/autorizacao.service';
 
 @Component({
   selector: 'app-login',
@@ -85,9 +87,18 @@ export class LoginComponent {
     {name: 'Wyoming', abbreviation: 'WY'}
   ];
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder,
+     private autorizacaoService:AutorizacaoService) {}
 
+  loginClick(){
+    if (this.autorizacaoService.obterLoginStatus())
+      this.autorizacaoService.deslogar();
+    else
+      this.autorizacaoService.autorizar();
+  }
+  
   onSubmit(): void {
+    this.loginClick();
     alert('Thanks!');
   }
 }

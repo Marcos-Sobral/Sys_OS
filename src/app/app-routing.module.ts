@@ -8,12 +8,15 @@ import { ManipulandoJsonComponent } from './pages/manipulando-json/manipulando-j
 import { SubeRouteComponent } from './pages/sube-route/sube-route.component';
 import { Page1Component } from './pages/sube-route/page1/page1.component';
 import { Page2Component } from './pages/sube-route/page2/page2.component';
+import { PrivadoComponent } from './pages/privado/privado.component';
+import { AutorizadoGuard } from './guards/autorizado.guard';
 
 const routes: Routes = [
   {path:'', redirectTo: '/home', pathMatch: 'full'},
   {path:'home', component: HomeComponent},
   {path:'cadastro', component: CadastroComponent},
   {path:'listar', component: ListarComponent},
+  {path:'detalhes/id', component: ListarComponent},
   {path:'login', component: LoginComponent},
   {path:'json', component: ManipulandoJsonComponent},
   {path:'subroute', component: SubeRouteComponent, 
@@ -22,6 +25,9 @@ const routes: Routes = [
       {path:'page2', component: Page2Component}
     ]
  
+  },
+  {path:'privado', component: PrivadoComponent, 
+    canActivate: [AutorizadoGuard]
   }
 
 ];
