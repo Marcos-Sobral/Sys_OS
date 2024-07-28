@@ -10,12 +10,12 @@ export class DetalheComponent implements OnInit {
 
   constructor(private route:ActivatedRoute) { }
 
-  indetifcador:number = 0;
+  indetificador:number = 0;
   ngOnInit(): void {
     this.route.params.forEach((params: Params) =>{
       if(params['id'] !== undefined){
-        this.indetifcador = +params['id'];
-        console.log(this.indetifcador);
+        this.indetificador = +params['id'];
+        console.log(this.indetificador);
       }
     })
   }

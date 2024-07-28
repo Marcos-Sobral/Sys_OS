@@ -10,13 +10,14 @@ import { Page1Component } from './pages/sube-route/page1/page1.component';
 import { Page2Component } from './pages/sube-route/page2/page2.component';
 import { PrivadoComponent } from './pages/privado/privado.component';
 import { AutorizadoGuard } from './guards/autorizado.guard';
+import { DetalheComponent } from './pages/detalhe/detalhe.component';
 
 const routes: Routes = [
   {path:'', redirectTo: '/home', pathMatch: 'full'},
   {path:'home', component: HomeComponent},
   {path:'cadastro', component: CadastroComponent},
   {path:'listar', component: ListarComponent},
-  {path:'detalhes/id', component: ListarComponent},
+  {path:'detalhe/:id', component: DetalheComponent},
   {path:'login', component: LoginComponent},
   {path:'json', component: ManipulandoJsonComponent},
   {path:'subroute', component: SubeRouteComponent, 
