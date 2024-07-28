@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service';
+// import { UserService } from '../../services/user.service';
 
+/*
 interface User {
   id: number;
   firstName: string;
@@ -8,22 +9,24 @@ interface User {
   phone: string;
   password: string;
 }
-
+*/
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
-export class UserComponent implements OnInit {
-  users: User[] = [];
-  user: User = { id: 0, firstName: '', email: '', phone: '', password: '' };
 
-  constructor(private userService: UserService) { }
+export class UserComponent implements OnInit {
+ /* users: User[] = [];
+  user: User = { id: 0, firstName: '', email: '', phone: '', password: '' };*/
+
+  constructor() { }
+ // constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    this.getUsers();
+   // this.getUsers();
   }
-
+/*
   getUsers(): void {
     this.userService.getUsers().subscribe(users => this.users = users);
   }
@@ -63,5 +66,5 @@ export class UserComponent implements OnInit {
 
   resetForm(): void {
     this.user = { id: 0, firstName: '', email: '', phone: '', password: '' };
-  }
+  }*/
 }
