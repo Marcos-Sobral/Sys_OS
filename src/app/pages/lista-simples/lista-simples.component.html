@@ -1,0 +1,22 @@
+<h1>Lista de Simples de Usuarios</h1>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let user of users'>
+                <td>{{ user.id }}</td>
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.phone }}</td>
+                <td><button mat-button (click)="goToDetail(user)">Ir para detalhe</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

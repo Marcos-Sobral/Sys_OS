@@ -10,12 +10,18 @@ export class DetalheComponent implements OnInit {
 
   constructor(private route:ActivatedRoute) { }
 
-  indetificador:number = 0;
+  identificador:number = 0;
+  phone:string = "";
+
   ngOnInit(): void {
     this.route.params.forEach((params: Params) =>{
       if(params['id'] !== undefined){
-        this.indetificador = +params['id'];
-        console.log(this.indetificador);
+        this.identificador = +params['id'];
+        console.log(this.identificador);
+      }
+      if(params['phone'] !== undefined){
+        this.phone = params['phone'];
+        console.log(this.phone);
       }
     })
   }

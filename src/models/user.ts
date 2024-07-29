@@ -1,6 +1,6 @@
 export class User{
     public id: string = "";
-    public name: string = "";
+    public firstName: string = "";
     public phone: string = "";
     public email: string = "";
 }

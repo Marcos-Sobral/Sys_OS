@@ -11,16 +11,16 @@ const httOptions = {
   providedIn: 'root'
 })
 export class UserService {
-BASE_URL: string = 'http://localhost:3000';
+BASE_URL: string = 'http://localhost:3000/';
 
   constructor(private http:HttpClient) { }
 
-  getUSERS(): Observable<User[]>{
-    return this.http.get<User[]>(this.BASE_URL + 'users')
+  getUsers(): Observable<User[]>{
+    return this.http.get<User[]>(this.BASE_URL + 'users/')
   }
 
   addUser(user:any): Observable<User>{
-    return this.http.post<User>(this.BASE_URL + 'users', user, httOptions);
+    return this.http.post<User>(this.BASE_URL + 'users/', user, httOptions);
   }
 
   editUser(user:any): Observable<User>{
