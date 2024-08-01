@@ -7,16 +7,16 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Email:" formControlName="loginEmail">
-            <mat-error *ngIf="addressForm.controls['loginEmail'].hasError('required')">
+            <input matInput placeholder="Email:" formControlName="email">
+            <mat-error *ngIf="addressForm.controls['email'].hasError('required')">
               Preenchimento do Email é <strong>Obrigatório</strong>
             </mat-error>
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Senha:" formControlName="loginPassword">
-            <mat-error *ngIf="addressForm.controls['loginPassword'].hasError('required')">
+            <input type="password" matInput placeholder="Senha:" formControlName="password">
+            <mat-error *ngIf="addressForm.controls['password'].hasError('required')">
               Preenchimento da senha é<strong>Obrigatório</strong>
             </mat-error>
           </mat-form-field>
@@ -25,7 +25,7 @@
 
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit" class="">Entrar na conta</button>
+      <button mat-raised-button [disabled]="!addressForm.valid" color="primary" type="submit" class="">Entrar na conta</button>
     </mat-card-actions>
   </mat-card>
 </form>
