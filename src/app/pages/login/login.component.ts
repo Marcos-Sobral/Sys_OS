@@ -11,7 +11,7 @@ import { AutorizacaoService } from 'src/app/services/autorizacao.service';
 export class LoginComponent {
   addressForm = this.fb.group({
     email: [null, Validators.compose([
-      Validators.required, Validators.minLength(5), Validators.maxLength(50)])
+      Validators.required, Validators.email, Validators.minLength(5), Validators.maxLength(50)])
     ],
     password: [null, Validators.compose(
       [Validators.required, Validators.minLength(6)])
