@@ -27,7 +27,10 @@ export class EditarComponent{
       phone: [this.user.phone, Validators.required],
       password: [this.user.password, Validators.compose(
         [Validators.required,Validators.minLength(6)]
-      )]
+      )],
+      cpf: [this.user.cpf, Validators.compose(
+        [Validators.required, Validators.minLength(11), Validators.maxLength(11)]
+      )],
     });
     this.email = this.addressForm.controls['email'];
   }
@@ -52,6 +55,8 @@ export class EditarComponent{
     this.user.phone = this.addressForm.controls['phone'].value;
     if(this.addressForm.controls['password'].value)
     this.user.password = this.addressForm.controls['password'].value;
+    if(this.addressForm.controls['cpf'].value)
+    this.user.cpf = this.addressForm.controls['cpf'].value;
     alert('Alteração realizada');
     console.log(this.user);
     localStorage.setItem('user', JSON.stringify(this.user));

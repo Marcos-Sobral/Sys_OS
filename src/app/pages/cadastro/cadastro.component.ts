@@ -20,6 +20,9 @@ export class CadastroComponent {
     phone: [null, Validators.required],
     password: [null, Validators.compose(
       [Validators.required,Validators.minLength(6)]
+    )],
+    cpf: [null, Validators.compose(
+      [Validators.required,Validators.minLength(11), Validators.maxLength(11)]
     )]
   });
   email = this.addressForm.controls['email'];
@@ -45,6 +48,8 @@ export class CadastroComponent {
     this.user.phone = this.addressForm.controls['phone'].value;
     if(this.addressForm.controls['password'].value)
     this.user.password = this.addressForm.controls['password'].value;
+    if(this.addressForm.controls['cpf'].value)
+    this.user.cpf = this.addressForm.controls['cpf'].value;
     alert('Cadastro realizado');
     console.log(this.user);
     localStorage.setItem('user', JSON.stringify(this.user));
