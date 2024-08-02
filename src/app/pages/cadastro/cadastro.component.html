@@ -16,8 +16,8 @@
         <div class="col">
           <mat-form-field class="full-width">
             <input matInput placeholder="Email" formControlName="email">
-            <mat-error *ngIf="addressForm.controls['email'].hasError('required')">
-              Preenchimento do Email é <strong>Obrigatório</strong>
+            <mat-error *ngIf="email.invalid">
+              {{getErrorMessage()}}
             </mat-error>
           </mat-form-field>
         </div>
@@ -27,7 +27,7 @@
           <mat-form-field class="full-width">
             <input matInput placeholder="Telefone:" formControlName="phone">
             <mat-error *ngIf="addressForm.controls['phone'].hasError('required')">
-              Preenchimento do Telefone é<strong>Obrigatório</strong>
+              Preenchimento do Telefone é <strong>Obrigatório</strong>
             </mat-error>
           </mat-form-field>
         </div>
