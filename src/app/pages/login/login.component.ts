@@ -17,6 +17,14 @@ export class LoginComponent {
       [Validators.required, Validators.minLength(6)])
     ],
   });
+  email =  this.addressForm.controls['email'];
+
+  getErrorMessage(){
+    if(this.email.hasError('required')){
+      return 'O email é obrigatório'
+    }
+    return this.email.hasError('email') ? 'Você deve preencher um valor para o email válido' : '';
+  }
 
   hasUnitNumber = false;
 

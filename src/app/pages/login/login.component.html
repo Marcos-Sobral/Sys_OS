@@ -8,8 +8,8 @@
         <div class="col">
           <mat-form-field class="full-width">
             <input matInput placeholder="Email:" formControlName="email">
-            <mat-error *ngIf="addressForm.controls['email'].hasError('required')">
-              Preenchimento do Email é <strong>Obrigatório</strong>
+            <mat-error *ngIf="email.invalid">
+              {{getErrorMessage()}}
             </mat-error>
           </mat-form-field>
         </div>
