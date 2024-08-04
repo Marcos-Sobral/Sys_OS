@@ -15,9 +15,23 @@
         </div>
         <div class="col">
           <mat-form-field class="full-width">
+            <input matInput mask='00.000.000/0000-00' placeholder="Cnpj:" formControlName="cnpj">
+            <mat-error *ngIf="addressForm.controls['cnpj'].hasError('required')">
+              Preenchimento do CNPJ é <strong>Obrigatório</strong>
+            </mat-error>
+            <mat-error *ngIf="addressForm.controls['cnpj'].hasError('cnpjNotValid')">
+              CNPJ informado não é <strong>Válido!</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
             <input matInput mask='000.000.000-00' placeholder="CPF:" formControlName="cpf">
             <mat-error *ngIf="addressForm.controls['cpf'].hasError('required')">
               Preenchimento do CPF é <strong>Obrigatório</strong>
+            </mat-error>
+            <mat-error *ngIf="addressForm.controls['cpf'].hasError('cpfNotValid')">
+              CPF informado não é <strong>Válido!</strong>
             </mat-error>
           </mat-form-field>
         </div>

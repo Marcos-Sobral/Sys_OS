@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { GenericValidator } from 'src/app/comum/validador';
 import { User } from 'src/models/user';
 
 @Component({
@@ -22,8 +23,11 @@ export class CadastroComponent {
       [Validators.required,Validators.minLength(6)]
     )],
     cpf: [null, Validators.compose(
-      [Validators.required,Validators.minLength(11), Validators.maxLength(11)]
-    )]
+      [Validators.required, GenericValidator.isValidCpf()]
+    )],
+    cnpj: [null, Validators.compose(
+      [Validators.required, GenericValidator.isValidCnpj()]
+    )],
   });
   email = this.addressForm.controls['email'];
   getErrorMessage(){
@@ -50,6 +54,8 @@ export class CadastroComponent {
     this.user.password = this.addressForm.controls['password'].value;
     if(this.addressForm.controls['cpf'].value)
     this.user.cpf = this.addressForm.controls['cpf'].value;
+    if(this.addressForm.controls['cnpj'].value)
+    this.user.cpf = this.addressForm.controls['cnpj'].value;
     alert('Cadastro realizado');
     console.log(this.user);
     localStorage.setItem('user', JSON.stringify(this.user));
