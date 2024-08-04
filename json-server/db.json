@@ -1,25 +1,49 @@
 {
   "users": [
     {
-      "id": 0,
-      "firstName": "Marcos Sobral",
+      "id": 1,
+      "name": "Marcos Sobral",
       "email": "vini15oficial@gmail.com",
       "phone": "(99) 99218-8809",
-      "password": "marcos16"
+      "password": "marcos16",
+      "cpf": "123.456.789-10",
+      "cnpj": "12.345.678/0001-95"
     },
     {
-      "id": 0,
-      "firstName": "Marcos Sobral",
-      "email": "sobraldeveloper@gmail.com",
-      "phone": "(99) 99218-8809",
-      "password": "marcos16"
+      "id": 2,
+      "name": "Ana Silva",
+      "email": "ana.silva@example.com",
+      "phone": "(11) 99876-5432",
+      "password": "ana2024",
+      "cpf": "987.654.321-00",
+      "cnpj": "98.765.432/0001-00"
     },
     {
-      "id": 0,
-      "firstName": "teste",
-      "email": "teste@gmail.com",
-      "phone": "(45) 98814245",
-      "password": "123456"
+      "id": 3,
+      "name": "Carlos Oliveira",
+      "email": "carlos.oliveira@example.com",
+      "phone": "(21) 98765-4321",
+      "password": "carlos123",
+      "cpf": "123.123.123-99",
+      "cnpj": "12.123.123/0001-11"
+    },
+    {
+      "id": 4,
+      "name": "Beatriz Costa",
+      "email": "beatriz.costa@example.com",
+      "phone": "(31) 91234-5678",
+      "password": "beatriz2024",
+      "cpf": "321.654.987-00",
+      "cnpj": "32.165.498/0001-22"
+    },
+    {
+      "id": 5,
+      "name": "Lucas Almeida",
+      "email": "lucas.almeida@example.com",
+      "phone": "(51) 92345-6789",
+      "password": "lucas2024",
+      "cpf": "456.789.123-00",
+      "cnpj": "45.678.912/0001-33"
     }
   ]
 }

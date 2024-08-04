@@ -12,7 +12,7 @@ export class CadastroComponent {
   user: User = new User();
   addressForm = this.fb.group({
     id: "",
-    firstName: [null, Validators.compose(
+    name: [null, Validators.compose(
       [Validators.required, Validators.minLength(3), Validators.maxLength(50)]
     )],
     email: [null, Validators.compose(
@@ -44,8 +44,8 @@ export class CadastroComponent {
 
   onSubmit(): void {
     this.user.id = '1';
-    if(this.addressForm.controls['firstName'].value)
-    this.user.firstName = this.addressForm.controls['firstName'].value;
+    if(this.addressForm.controls['name'].value)
+    this.user.name = this.addressForm.controls['name'].value;
     if(this.addressForm.controls['email'].value)
     this.user.email = this.addressForm.controls['email'].value;
     if(this.addressForm.controls['phone'].value)
@@ -55,9 +55,9 @@ export class CadastroComponent {
     if(this.addressForm.controls['cpf'].value)
     this.user.cpf = this.addressForm.controls['cpf'].value;
     if(this.addressForm.controls['cnpj'].value)
-    this.user.cpf = this.addressForm.controls['cnpj'].value;
+    this.user.cnpj = this.addressForm.controls['cnpj'].value;
     alert('Cadastro realizado');
     console.log(this.user);
-    localStorage.setItem('user', JSON.stringify(this.user));
+    //localStorage.setItem('user', JSON.stringify(this.user));
   }
 }
