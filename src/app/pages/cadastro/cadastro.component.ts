@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { GenericValidator } from 'src/app/comum/validador';
+import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/models/user';
 
 @Component({
@@ -40,10 +41,10 @@ export class CadastroComponent {
 
   hasUnitNumber = false;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private service: UserService) {}
 
   onSubmit(): void {
-    this.user.id = '1';
+
     if(this.addressForm.controls['name'].value)
     this.user.name = this.addressForm.controls['name'].value;
     if(this.addressForm.controls['email'].value)
@@ -56,8 +57,18 @@ export class CadastroComponent {
     this.user.cpf = this.addressForm.controls['cpf'].value;
     if(this.addressForm.controls['cnpj'].value)
     this.user.cnpj = this.addressForm.controls['cnpj'].value;
-    alert('Cadastro realizado');
     console.log(this.user);
     //localStorage.setItem('user', JSON.stringify(this.user));
+
+    this.service.addUser(this.user).subscribe({
+      next: (response) => {
+        console.log(response)
+        alert('Dado registrado com sucesso.')
+      },
+      error: (erro:any) => {
+        console.log(erro);
+        alert('Ocorreu algum erro.')
+      }
+     });
   }
 }

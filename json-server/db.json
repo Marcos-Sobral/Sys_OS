@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Marcos Sobral",
       "email": "vini15oficial@gmail.com",
       "phone": "(99) 99218-8809",
@@ -10,7 +10,7 @@
       "cnpj": "12.345.678/0001-95"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Ana Silva",
       "email": "ana.silva@example.com",
       "phone": "(11) 99876-5432",
@@ -19,7 +19,7 @@
       "cnpj": "98.765.432/0001-00"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Carlos Oliveira",
       "email": "carlos.oliveira@example.com",
       "phone": "(21) 98765-4321",
@@ -28,7 +28,7 @@
       "cnpj": "12.123.123/0001-11"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Beatriz Costa",
       "email": "beatriz.costa@example.com",
       "phone": "(31) 91234-5678",
@@ -37,13 +37,22 @@
       "cnpj": "32.165.498/0001-22"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Lucas Almeida",
       "email": "lucas.almeida@example.com",
       "phone": "(51) 92345-6789",
       "password": "lucas2024",
       "cpf": "456.789.123-00",
       "cnpj": "45.678.912/0001-33"
+    },
+    {
+      "id": "",
+      "name": "Debora",
+      "phone": "21654695894",
+      "email": "debora@gmail.com",
+      "password": "debora123",
+      "cpf": "64458000098",
+      "cnpj": "10681569000113"
     }
   ]
 }
