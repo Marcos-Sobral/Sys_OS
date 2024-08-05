@@ -6,4 +6,5 @@ export class User{
     public password: string = "";
     public cpf: string = "";
     public cnpj: string = "";
+    public dataNascimento: string = "";
 }

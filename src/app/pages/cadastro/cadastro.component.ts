@@ -20,6 +20,9 @@ export class CadastroComponent {
       [Validators.required, Validators.email]
     )],
     phone: [null, Validators.required],
+    dataNascimento: [null, Validators.compose(
+      [Validators.required, Validators.minLength(8), Validators.maxLength(8)]
+    )],
     password: [null, Validators.compose(
       [Validators.required,Validators.minLength(6)]
     )],
@@ -57,6 +60,8 @@ export class CadastroComponent {
     this.user.cpf = this.addressForm.controls['cpf'].value;
     if(this.addressForm.controls['cnpj'].value)
     this.user.cnpj = this.addressForm.controls['cnpj'].value;
+    if(this.addressForm.controls['dataNascimento'].value)
+    this.user.dataNascimento = this.addressForm.controls['dataNascimento'].value;
     console.log(this.user);
     //localStorage.setItem('user', JSON.stringify(this.user));
 

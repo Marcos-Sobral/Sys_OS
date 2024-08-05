@@ -62,6 +62,20 @@
           </mat-form-field>
         </div>
       </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field>
+            <mat-label>Escolha uma data</mat-label>
+            <input type="number" matInput formControlName="dataNascimento" [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="addressForm.controls['dataNascimento'].hasError('required')">
+              Preenchimento da Data de Nascimento é <strong>Obrigatório</strong>
+            </mat-error>  
+          </mat-form-field>        
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        </div>
+      </div>
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button [disabled]="!addressForm.valid" color="primary" type="submit">Submit</button>
