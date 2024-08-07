@@ -59,6 +59,16 @@
       "cpf": "64458000098",
       "cnpj": "10681569000113",
       "birthdate": "1993-06-15"
+    },
+    {
+      "id": "",
+      "name": "Matheus José",
+      "phone": "99991023333",
+      "email": "matheusjose@gmail.com",
+      "password": "123456789",
+      "cpf": "80926071092",
+      "cnpj": "67539453000161",
+      "dataNascimento": "2002-03-13T03:00:00.000Z"
     }
   ]
 }

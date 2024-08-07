@@ -20,9 +20,7 @@ export class CadastroComponent {
       [Validators.required, Validators.email]
     )],
     phone: [null, Validators.required],
-    dataNascimento: [null, Validators.compose(
-      [Validators.required, Validators.minLength(8), Validators.maxLength(8)]
-    )],
+    dataNascimento: [null, Validators.required],
     password: [null, Validators.compose(
       [Validators.required,Validators.minLength(6)]
     )],

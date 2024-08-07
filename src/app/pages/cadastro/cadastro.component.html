@@ -66,7 +66,7 @@
         <div class="col">
           <mat-form-field>
             <mat-label>Escolha uma data</mat-label>
-            <input type="number" matInput formControlName="dataNascimento" [matDatepicker]="picker">
+            <input matInput formControlName="dataNascimento" [matDatepicker]="picker">
             <mat-hint>MM/DD/YYYY</mat-hint>
             <mat-datepicker #picker></mat-datepicker>
             <mat-error *ngIf="addressForm.controls['dataNascimento'].hasError('required')">
