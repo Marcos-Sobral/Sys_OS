@@ -42,6 +42,10 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { TabelaComponent } from './pages/tabela/tabela.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -64,7 +68,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     ListaSimplesComponent,
     EditarComponent,
     ModalComponent,
-    DialogContentExampleDialog
+    DialogContentExampleDialog,
+    TabelaComponent
   ],
   imports: [
     FormsModule,
@@ -92,7 +97,10 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatBottomSheetModule,
     MatDialogModule,
     MatSnackBarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

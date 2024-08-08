@@ -14,6 +14,7 @@ import { DetalheComponent } from './pages/detalhe/detalhe.component';
 import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.component';
 import { EditarComponent } from './pages/editar/editar.component';
 import { ModalComponent } from './pages/modal/modal.component';
+import { TabelaComponent } from './pages/tabela/tabela.component';
 
 const routes: Routes = [
   {path:'', redirectTo: '/home', pathMatch: 'full'},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'cadastro', component: CadastroComponent},
   {path:'editar', component: EditarComponent},
   {path:'listar', component: ListarComponent},
+  {path:'tabela', component: TabelaComponent},
   {path:'listaSimples', component:ListaSimplesComponent},
   {path:'detalhe/:id/:phone', component: DetalheComponent},
   {path:'login', component: LoginComponent},
