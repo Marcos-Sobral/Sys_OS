@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { ListarComponent } from './pages/listar/listar.component';
 import { LoginComponent } from './pages/login/login.component';
+import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { ManipulandoJsonComponent } from './pages/manipulando-json/manipulando-json.component';
 import { SubeRouteComponent } from './pages/sube-route/sube-route.component';
 import { Page1Component } from './pages/sube-route/page1/page1.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path:'listaSimples', component:ListaSimplesComponent},
   {path:'detalhe/:id/:phone', component: DetalheComponent},
   {path:'login', component: LoginComponent},
+  {path:'usuario', component: UsuarioComponent},
   {path:'modal', component: ModalComponent},
   {path:'json', component: ManipulandoJsonComponent},
   {path:'subroute', component: SubeRouteComponent, 
@@ -37,7 +39,8 @@ const routes: Routes = [
   },
   {path:'privado', component: PrivadoComponent, 
     canActivate: [AutorizadoGuard]
-  }
+  },
+  { path: 'pages/lazy', loadChildren: () => import('./pages/lazy/lazy.module').then(m => m.LazyModule) }
 
 ];
 

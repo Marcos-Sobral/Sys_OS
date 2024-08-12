@@ -19,6 +19,8 @@ export class CadastroComponent {
     email: [null, Validators.compose(
       [Validators.required, Validators.email]
     )],
+    cep: [null, Validators.compose(
+    [Validators.required, GenericValidator.isValidCep()])],
     phone: [null, Validators.required],
     dataNascimento: [null, Validators.required],
     password: [null, Validators.compose(

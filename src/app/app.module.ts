@@ -46,6 +46,7 @@ import { TabelaComponent } from './pages/tabela/tabela.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { UsuarioComponent } from './pages/usuario/usuario.component';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import { MatSortModule } from '@angular/material/sort';
     EditarComponent,
     ModalComponent,
     DialogContentExampleDialog,
-    TabelaComponent
+    TabelaComponent,
+    UsuarioComponent
   ],
   imports: [
     FormsModule,

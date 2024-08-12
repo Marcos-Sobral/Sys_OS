@@ -1,7 +1,9 @@
 import { ThisReceiver } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AutorizacaoService } from 'src/app/services/autorizacao.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +20,11 @@ export class LoginComponent {
     ],
   });
   email =  this.addressForm.controls['email'];
+  constructor(
+    private fb: FormBuilder,
+    private service: UserService,
+    private router: Router,
+    private autorizacaoService:AutorizacaoService) {}
 
   getErrorMessage(){
     if(this.email.hasError('required')){
@@ -28,9 +35,6 @@ export class LoginComponent {
 
   hasUnitNumber = false;
 
-  constructor(private fb: FormBuilder,
-     private autorizacaoService:AutorizacaoService) {}
-
   loginClick(){
     if (this.autorizacaoService.obterLoginStatus())
       this.autorizacaoService.deslogar();
@@ -39,7 +43,24 @@ export class LoginComponent {
   }
   
   onSubmit(): void {
-    this.loginClick();
-    alert('Thanks!');
+    if (this.autorizacaoService.obterLoginStatus())
+    this.autorizacaoService.deslogar();
+    else{
+      //this.autorizacaoService.autorizar();
+      this.service.login({user:'Marcos'}).subscribe({
+        next: (response) => {
+          console.log(response.IdToken)
+          if(response.IdToken)
+            this.autorizacaoService.autorizar();
+            this.router.navigate(['/usuario']);
+          //alert('Dado registrado com sucesso.')
+         
+        },
+        error: (erro:any) => {
+          //console.log(erro);
+          //alert('Ocorreu algum erro.')
+        }
+       });
+    }
   }
 }

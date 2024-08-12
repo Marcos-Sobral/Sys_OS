@@ -1,4 +1,4 @@
-import { AbstractControl, Validators } from "@angular/forms";
+import { AbstractControl, ValidationErrors, ValidatorFn, Validators } from "@angular/forms";
 
 export class GenericValidator {
   constructor() {}
@@ -87,4 +87,19 @@ export class GenericValidator {
       return null as any;
     };
   }
+
+  static isValidCep(): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      const cep = control.value;
+      if (cep) {
+        const cepPattern = /^[0-9]{5}-?[0-9]{3}$/;
+  
+        if (!cepPattern.test(cep)) {
+          return { cepNotValid: true };
+        }
+      }
+      return null;
+    };
+  }
+  
 }
