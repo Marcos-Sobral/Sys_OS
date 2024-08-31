@@ -5,6 +5,7 @@ import { catchError, tap } from 'rxjs/operators';
 import { User } from '../../models/user';
 import { UserAuth } from '../../models/userAuth';
 import { UserReturn } from '../../models/userReturn';
+import { firebaseConfig } from 'src/environments/firebase.config';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -25,12 +26,17 @@ export class UserService {
   }
 
   login(data: any): Observable<UserAuth> {
-    console.log(data);
-    var url: string = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDThl5AbjP3GU4XvtdpBn5ZvVUFVXMJMSA';
-    console.log(url)
-    return this.http.post<UserAuth>(url, data, httpOptions);
-
+    const payload = {
+      email: data.email,
+      password: data.password,
+      returnSecureToken: true // Necessário para receber o `idToken`
+    };
+    
+    const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${firebaseConfig.apiKey}`;
+    
+    return this.http.post<UserAuth>(url, payload, httpOptions);
   }
+  
   /**  PUT user api EDIT User Function  */
   editUser(user: any): Observable<User> {
     var url: string = this.BASE_URL + 'users/' + user.id;;
@@ -39,7 +45,7 @@ export class UserService {
 
   getUserById(id: string): Observable<UserReturn> {
     let data = {idToken: localStorage.getItem('token') || ''}
-    var url: string = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyC6GaPSnW536wX9j6V_9iTFDAvdsbooVnE';
+    var url: string = 'https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyDThl5AbjP3GU4XvtdpBn5ZvVUFVXMJMSA';
     return this.http.post<UserReturn>(url, data, httpOptions).pipe(
       tap((retorno: UserReturn) => {
         console.log(retorno)
