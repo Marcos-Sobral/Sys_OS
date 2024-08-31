@@ -49,6 +49,11 @@ import { MatSortModule } from '@angular/material/sort';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
 
 
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { firebaseConfig } from '../environments/firebase.config';
+import { AuthTestComponent } from './pages/auth-test/auth-test.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +76,8 @@ import { UsuarioComponent } from './pages/usuario/usuario.component';
     ModalComponent,
     DialogContentExampleDialog,
     TabelaComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    AuthTestComponent
   ],
   imports: [
     FormsModule,
@@ -102,7 +108,9 @@ import { UsuarioComponent } from './pages/usuario/usuario.component';
     MatTooltipModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    provideAuth(() => getAuth()),
   ],
   providers: [],
   bootstrap: [AppComponent]

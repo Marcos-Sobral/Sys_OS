@@ -16,6 +16,7 @@ import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.compo
 import { EditarComponent } from './pages/editar/editar.component';
 import { ModalComponent } from './pages/modal/modal.component';
 import { TabelaComponent } from './pages/tabela/tabela.component';
+import { AuthTestComponent } from './pages/auth-test/auth-test.component';
 
 const routes: Routes = [
   {path:'', redirectTo: '/home', pathMatch: 'full'},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path:'listaSimples', component:ListaSimplesComponent},
   {path:'detalhe/:id/:phone', component: DetalheComponent},
   {path:'login', component: LoginComponent},
+  {path:'auth', component: AuthTestComponent},
   {path:'usuario', component: UsuarioComponent},
   {path:'modal', component: ModalComponent},
   {path:'json', component: ManipulandoJsonComponent},

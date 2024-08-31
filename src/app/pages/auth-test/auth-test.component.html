@@ -1,0 +1,12 @@
+<div>
+    <h2>Auth Test</h2>
+    <form (ngSubmit)="login()">
+      <label for="loginEmail">Email:</label>
+      <input type="email" id="loginEmail" [(ngModel)]="email" name="loginEmail" required />
+      <label for="loginPassword">Password:</label>
+      <input type="password" id="loginPassword" [(ngModel)]="password" name="loginPassword" required />
+      <button type="submit">Login</button>
+    </form>
+    <p>{{ message }}</p>
+  </div>
+  

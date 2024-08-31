@@ -39,7 +39,7 @@ export class UserService {
 
   getUserById(id: string): Observable<UserReturn> {
     let data = {idToken: localStorage.getItem('token') || ''}
-    var url: string = 'https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyDThl5AbjP3GU4XvtdpBn5ZvVUFVXMJMSA';
+    var url: string = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyC6GaPSnW536wX9j6V_9iTFDAvdsbooVnE';
     return this.http.post<UserReturn>(url, data, httpOptions).pipe(
       tap((retorno: UserReturn) => {
         console.log(retorno)
