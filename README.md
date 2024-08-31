@@ -16,6 +16,22 @@ Caso deseje verificar a sua, utilize o comando `ng version` em seu terminal do p
 
 ## Problemas
 
+### Problema na instalação ou execução do seu Angula CLI
+
+* Para instalar o Angular CLI na versão 14:
+
+- remova todas as dependëncias caso tiver:
+`  npm uninstall -g @angular/cli `
+
+- Verifique o cache pelo npm:
+` npm cache verify `
+
+- Instale Angular na Versáo 14:
+` npm install -g @angular/cli@14`
+
+- `Verifique a versáo do seu Angular:
+` npm install -g @angular/cli@14 `
+
 ### Problema em instalar o Angula Material
 
 * Para instalar o Material:
