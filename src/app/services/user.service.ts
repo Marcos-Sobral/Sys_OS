@@ -26,7 +26,7 @@ export class UserService {
 
   login(data: any): Observable<UserAuth> {
     console.log(data);
-    var url: string = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDThl5AbjP3GU4XvtdpBn5ZvVUFVXMJMSA';
+    var url: string = 'http://localhost:3000/users/';
     console.log(url)
     return this.http.post<UserAuth>(url, data, httpOptions);
 
@@ -39,7 +39,7 @@ export class UserService {
 
   getUserById(id: string): Observable<UserReturn> {
     let data = {idToken: localStorage.getItem('token') || ''}
-    var url: string = 'https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyDThl5AbjP3GU4XvtdpBn5ZvVUFVXMJMSA';
+    var url: string = 'http://localhost:3000/users/';
     return this.http.post<UserReturn>(url, data, httpOptions).pipe(
       tap((retorno: UserReturn) => {
         console.log(retorno)
