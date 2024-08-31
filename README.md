@@ -35,7 +35,7 @@ Caso deseje verificar a sua, utilize o comando `ng version` em seu terminal do p
 ### Problema em instalar o Angula Material
 
 * Para instalar o Material:
-` ng update @angular/material@14 `
+` ng add @angular/material@14 `
 
 * Caso já tenha instalado e está com problemas em gerar componentes, tente atualizar
 ` ng update @angular/material@14 `
