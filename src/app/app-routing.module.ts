@@ -18,6 +18,7 @@ import { ModalComponent } from './pages/modal/modal.component';
 import { TabelaComponent } from './pages/tabela/tabela.component';
 import { AuthTestComponent } from './pages/auth-test/auth-test.component';
 import { EditComponent } from './contatos/edit/edit.component';
+import { ListComponent } from './contatos/list/list.component';
 
 const routes: Routes = [
   {path:'', redirectTo: '/home', pathMatch: 'full'},
@@ -45,6 +46,7 @@ const routes: Routes = [
   },
   { path: 'pages/lazy', loadChildren: () => import('./pages/lazy/lazy.module').then(m => m.LazyModule) },
   {path:'contatoedit', component: EditComponent},
+  {path:'contatolist', component: ListComponent},
 
 ];
 
