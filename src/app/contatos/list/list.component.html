@@ -1,10 +1,23 @@
-<div class="card mt-2" *ngFor="let contato of contatos | async">
-    <div class="card-body">
-        <h5 class="card-title">{{contato.nome}}</h5>
-        <p class="card-text">{{contato.telefone}}</p>
-    </div>
-    <div class="card-footer">
-        <button type="button" class="btn btn-default" (click)="edit(contato, contato.key)">Editar</button>
-        <button type="button" class="btn btn-danger ml-2" (click)="delete(contato.key)">Excluir</button>
-    </div>
+<h1>Lista de Contatos</h1>
+<div class="container table-responsive">
+    <table class="table text-center">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let contato of contatos | async">
+                <td>{{contato.nome}}</td>
+                <td>{{contato.telefone}}</td>
+                <td>
+                    <button mat-button (click)="edit(contato, contato.key)">Editar</button>
+                    <button mat-button color="warn" (click)="delete(contato.key)">Excluir</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
+  
