@@ -59,8 +59,9 @@ import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
-import { EditComponent } from './contatos/edit/edit.component';
 import { ListComponent } from './contatos/list/list.component';
+import { EditarContatoComponent } from './contatos/editar-contato/editar-contato.component';
+import { CriarComponent } from './contatos/criar/criar.component';
 
 @NgModule({
   declarations: [
@@ -86,8 +87,9 @@ import { ListComponent } from './contatos/list/list.component';
     TabelaComponent,
     UsuarioComponent,
     AuthTestComponent,
-    EditComponent,
-    ListComponent
+    ListComponent,
+    EditarContatoComponent,
+    CriarComponent
   ],
   imports: [
     FormsModule,
