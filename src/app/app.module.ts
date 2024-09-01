@@ -48,11 +48,19 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
 
-
+//Authentication Firebase
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { firebaseConfig } from '../environments/firebase.config';
 import { AuthTestComponent } from './pages/auth-test/auth-test.component';
+
+// Realtime Databse Firebase
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+
+import { EditComponent } from './contatos/edit/edit.component';
+import { ListComponent } from './contatos/list/list.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +85,9 @@ import { AuthTestComponent } from './pages/auth-test/auth-test.component';
     DialogContentExampleDialog,
     TabelaComponent,
     UsuarioComponent,
-    AuthTestComponent
+    AuthTestComponent,
+    EditComponent,
+    ListComponent
   ],
   imports: [
     FormsModule,
@@ -111,6 +121,8 @@ import { AuthTestComponent } from './pages/auth-test/auth-test.component';
     MatSortModule,
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
     provideAuth(() => getAuth()),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

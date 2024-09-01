@@ -17,6 +17,7 @@ import { EditarComponent } from './pages/editar/editar.component';
 import { ModalComponent } from './pages/modal/modal.component';
 import { TabelaComponent } from './pages/tabela/tabela.component';
 import { AuthTestComponent } from './pages/auth-test/auth-test.component';
+import { EditComponent } from './contatos/edit/edit.component';
 
 const routes: Routes = [
   {path:'', redirectTo: '/home', pathMatch: 'full'},
@@ -42,7 +43,8 @@ const routes: Routes = [
   {path:'privado', component: PrivadoComponent, 
     canActivate: [AutorizadoGuard]
   },
-  { path: 'pages/lazy', loadChildren: () => import('./pages/lazy/lazy.module').then(m => m.LazyModule) }
+  { path: 'pages/lazy', loadChildren: () => import('./pages/lazy/lazy.module').then(m => m.LazyModule) },
+  {path:'contatoedit', component: EditComponent},
 
 ];
 
