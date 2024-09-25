@@ -1,6 +1,6 @@
 # SysOS
 
-O Sts OS é um projeto que estou para fins de aprendizagem sobre angula e testes.
+O Sys OS é um projeto que estou para fins de aprendizagem sobre angula e testes.
 
 ## Especificações utilizada no projeto
 
